@@ -342,8 +342,7 @@ TEST (account, encode_zero)
 	/*
 	 * Handle different lengths for "xrb_" prefixed and "nano_" prefixed accounts
 	 */
-	ASSERT_EQ ((str0.front () == 'x') ? 64 : 65, str0.size ());
-	ASSERT_EQ (65, str0.size ());
+	ASSERT_EQ (64, str0.size ());
 	nano::account number1;
 	ASSERT_FALSE (number1.decode_account (str0));
 	ASSERT_EQ (number0, number1);
@@ -359,7 +358,7 @@ TEST (account, encode_all)
 	/*
 	 * Handle different lengths for "xrb_" prefixed and "nano_" prefixed accounts
 	 */
-	ASSERT_EQ ((str0.front () == 'x') ? 64 : 65, str0.size ());
+	ASSERT_EQ (64, str0.size ());
 	nano::account number1;
 	ASSERT_FALSE (number1.decode_account (str0));
 	ASSERT_EQ (number0, number1);

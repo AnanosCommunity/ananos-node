@@ -381,9 +381,9 @@ TEST (uint256_union, account_transcode)
 
 	/*
 	 * Handle different offsets for the underscore separator
-	 * for "xrb_" prefixed and "nano_" prefixed accounts
+	 * for "ana_" prefixed
 	 */
-	unsigned offset = (text.front () == 'x') ? 3 : 4;
+	unsigned offset = 3;
 	ASSERT_EQ ('_', text[offset]);
 	text[offset] = '-';
 	nano::account value2;
@@ -399,9 +399,9 @@ TEST (uint256_union, account_encode_lex)
 	auto max_text (max.to_account ());
 
 	/*
-	 * Handle different lengths for "xrb_" prefixed and "nano_" prefixed accounts
+	 * Handle different lengths for "ana_" prefixed
 	 */
-	unsigned length = (min_text.front () == 'x') ? 64 : 65;
+	unsigned length = 64;
 	ASSERT_EQ (length, min_text.size ());
 	ASSERT_EQ (length, max_text.size ());
 
@@ -430,15 +430,15 @@ TEST (uint256_union, bounds)
 {
 	nano::account key;
 	std::string bad1 (64, '\x000');
-	bad1[0] = 'x';
-	bad1[1] = 'r';
-	bad1[2] = 'b';
+	bad1[0] = 'a';
+	bad1[1] = 'n';
+	bad1[2] = 'a';
 	bad1[3] = '-';
 	ASSERT_TRUE (key.decode_account (bad1));
 	std::string bad2 (64, '\x0ff');
-	bad2[0] = 'x';
-	bad2[1] = 'r';
-	bad2[2] = 'b';
+	bad2[0] = 'a';
+	bad2[1] = 'n';
+	bad2[2] = 'a';
 	bad2[3] = '-';
 	ASSERT_TRUE (key.decode_account (bad2));
 }

@@ -9,7 +9,7 @@ parser = argparse.ArgumentParser(
     description='Generate bootstrap representative weight file.')
 parser.add_argument("output", type=str, help="output weight file")
 parser.add_argument("--rpc", help="node rpc host:port",
-                    default="http://[::1]:7076")
+                    default="http://[::1]:7176")
 parser.add_argument(
     "--limit", help="percentage of the active supply represented", default=0.99)
 parser.add_argument(
