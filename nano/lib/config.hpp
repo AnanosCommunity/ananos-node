@@ -67,13 +67,13 @@ enum class networks : uint16_t
 {
 	invalid = 0x0,
 	// Low work parameters, publicly known genesis key, dev IP ports
-	nano_dev_network = std::array<uint8_t, 2>{ { 'A', 'N' } }, // 'A', 'N'
+	nano_dev_network = 0x5244, // 'R', 'D'
 	// Normal work parameters, secret beta genesis key, beta IP ports
-	nano_beta_network = std::array<uint8_t, 2>{ { 'A', 'B' } }, // 'A', 'B'
+	nano_beta_network = 0x5245, // 'R', 'E'
 	// Normal work parameters, secret live key, live IP ports
-	nano_live_network = std::array<uint8_t, 2>{ { 'A', 'C' } }, // 'A', 'C'
+	nano_live_network = 0x5246, // 'R', 'F'
 	// Normal work parameters, secret test genesis key, test IP ports
-	nano_test_network = std::array<uint8_t, 2>{ { 'A', 'X' } }, // 'A', 'X'
+	nano_test_network = 0x5257, // 'R', 'W'
 };
 
 enum class work_version
