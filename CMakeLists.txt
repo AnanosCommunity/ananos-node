@@ -19,7 +19,7 @@ set(CMAKE_OSX_DEPLOYMENT_TARGET
     10.14
     CACHE STRING "")
 
-project(nano-node)
+project(ananos-node)
 
 # Get the latest abbreviated commit hash of the working branch
 execute_process(
@@ -41,7 +41,7 @@ set(CPACK_PACKAGE_VERSION_MAJOR "22")
 set(CPACK_PACKAGE_VERSION_MINOR "1")
 set(CPACK_PACKAGE_VERSION_PATCH "0")
 set(CPACK_PACKAGE_VERSION_PRE_RELEASE "0")
-set(CPACK_PACKAGE_VENDOR "Nano Currency")
+set(CPACK_PACKAGE_VENDOR "Ananos Currency")
 
 if(CI_BUILD)
   set(TAG_VERSION_STRING "$ENV{TRAVIS_TAG}")
@@ -153,47 +153,47 @@ option(
 option(ENABLE_AVX2 "Enable AVX2 optimizations" OFF)
 
 set(ACTIVE_NETWORK
-    nano_live_network
+    ananos_live_network
     CACHE STRING "Selects which network parameters are used")
 set_property(
-  CACHE ACTIVE_NETWORK PROPERTY STRINGS nano_dev_network nano_beta_network
-                                nano_live_network nano_test_network)
+  CACHE ACTIVE_NETWORK PROPERTY STRINGS ananos_dev_network ananos_beta_network
+                                ananos_live_network ananos_test_network)
 set(CPACK_PACKAGE_NAME
-    "nano-node"
+    "ananos-node"
     CACHE STRING "" FORCE)
 set(CPACK_NSIS_PACKAGE_NAME
-    "Nano"
+    "Ananos"
     CACHE STRING "" FORCE)
 set(CPACK_PACKAGE_INSTALL_DIRECTORY
-    "nanocurrency"
+    "ananos"
     CACHE STRING "" FORCE)
-set(NANO_SERVICE "nanocurrency.service")
+set(NANO_SERVICE "ananos.service")
 set(NANO_PREFIX "")
-if("${ACTIVE_NETWORK}" MATCHES "nano_beta_network")
-  project("nano-node-beta")
+if("${ACTIVE_NETWORK}" MATCHES "ananos_beta_network")
+  project("ananos-node-beta")
   set(CPACK_PACKAGE_NAME
-      "nano-node-beta"
+      "ananos-node-beta"
       CACHE STRING "" FORCE)
   set(CPACK_NSIS_PACKAGE_NAME
-      "Nano-Beta"
+      "Ananos-Beta"
       CACHE STRING "" FORCE)
   set(CPACK_PACKAGE_INSTALL_DIRECTORY
-      "nanocurrency-beta"
+      "ananos-beta"
       CACHE STRING "" FORCE)
-  set(NANO_SERVICE "nanocurrency-beta.service")
+  set(NANO_SERVICE "ananos-beta.service")
   set(NANO_PREFIX "Beta")
-elseif("${ACTIVE_NETWORK}" MATCHES "nano_test_network")
-  project("nano-node-test")
+elseif("${ACTIVE_NETWORK}" MATCHES "ananos_test_network")
+  project("ananos-node-test")
   set(CPACK_PACKAGE_NAME
-      "nano-node-test"
+      "ananos-node-test"
       CACHE STRING "" FORCE)
   set(CPACK_NSIS_PACKAGE_NAME
-      "Nano-Test"
+      "Ananos-Test"
       CACHE STRING "" FORCE)
   set(CPACK_PACKAGE_INSTALL_DIRECTORY
-      "nanocurrency-test"
+      "ananos-test"
       CACHE STRING "" FORCE)
-  set(NANO_SERVICE "nanocurrency-test.service")
+  set(NANO_SERVICE "ananos-test.service")
   set(NANO_PREFIX "Test")
 endif()
 set(NANO_OSX_PACKAGE_NAME
