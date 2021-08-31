@@ -45,7 +45,7 @@ char const * beta_genesis_data = R"%%%({
 	"representative": "ana_38enhxt6k5izyrc47tptcdytga7uhftworydqsbm7gsfgecmrjrowou349ae",
 	"account": "ana_38enhxt6k5izyrc47tptcdytga7uhftworydqsbm7gsfgecmrjrowou349ae",
 	"work": "4558e579982efac4",
-	"signature": "D795C06BB912EA962AE9C6F26694DC5E25D1FE320E11238003401C1811E658185DF458D8991A7F25E3A9B1C398F1B2E79BC58307C0EF7D9883797AE7710F4C0D"
+	"signature": "EF8A662B7158E999BD91F47608E2FDABFF7D3F014EB459627C6DE5AD5FF796F54035C23440BEC956587BB3D96B67523F24225EC60DACCC8BB5022A9300064D0C"
 	})%%%";
 
 char const * live_genesis_data = R"%%%({
@@ -54,7 +54,7 @@ char const * live_genesis_data = R"%%%({
 	"representative": "ana_38enhxt6k5izyrc47tptcdytga7uhftworydqsbm7gsfgecmrjrowou349ae",
 	"account": "ana_38enhxt6k5izyrc47tptcdytga7uhftworydqsbm7gsfgecmrjrowou349ae",
 	"work": "4558e579982efac4",
-	"signature": "D795C06BB912EA962AE9C6F26694DC5E25D1FE320E11238003401C1811E658185DF458D8991A7F25E3A9B1C398F1B2E79BC58307C0EF7D9883797AE7710F4C0D"
+	"signature": "EF8A662B7158E999BD91F47608E2FDABFF7D3F014EB459627C6DE5AD5FF796F54035C23440BEC956587BB3D96B67523F24225EC60DACCC8BB5022A9300064D0C"
 	})%%%";
 
 std::string const test_genesis_data = nano::get_env_or_default ("NANO_TEST_GENESIS_BLOCK", R"%%%({
@@ -63,7 +63,7 @@ std::string const test_genesis_data = nano::get_env_or_default ("NANO_TEST_GENES
 	"representative": "ana_38enhxt6k5izyrc47tptcdytga7uhftworydqsbm7gsfgecmrjrowou349ae",
 	"account": "ana_38enhxt6k5izyrc47tptcdytga7uhftworydqsbm7gsfgecmrjrowou349ae",
 	"work": "4558e579982efac4",
-	"signature": "D795C06BB912EA962AE9C6F26694DC5E25D1FE320E11238003401C1811E658185DF458D8991A7F25E3A9B1C398F1B2E79BC58307C0EF7D9883797AE7710F4C0D"
+	"signature": "EF8A662B7158E999BD91F47608E2FDABFF7D3F014EB459627C6DE5AD5FF796F54035C23440BEC956587BB3D96B67523F24225EC60DACCC8BB5022A9300064D0C"
 	})%%%");
 
 std::shared_ptr<nano::block> parse_block_from_genesis_data (std::string const & genesis_data_a)
