@@ -83,28 +83,28 @@ uint64_t get_env_threshold_or_default (char const * variable_name, uint64_t cons
 
 uint16_t test_node_port ()
 {
-	auto test_env = nano::get_env_or_default ("NANO_TEST_NODE_PORT", "17075");
+	auto test_env = nano::get_env_or_default ("NANO_TEST_NODE_PORT", "17175");
 	return boost::lexical_cast<uint16_t> (test_env);
 }
 uint16_t test_rpc_port ()
 {
-	auto test_env = nano::get_env_or_default ("NANO_TEST_RPC_PORT", "17076");
+	auto test_env = nano::get_env_or_default ("NANO_TEST_RPC_PORT", "17176");
 	return boost::lexical_cast<uint16_t> (test_env);
 }
 uint16_t test_ipc_port ()
 {
-	auto test_env = nano::get_env_or_default ("NANO_TEST_IPC_PORT", "17077");
+	auto test_env = nano::get_env_or_default ("NANO_TEST_IPC_PORT", "17177");
 	return boost::lexical_cast<uint16_t> (test_env);
 }
 uint16_t test_websocket_port ()
 {
-	auto test_env = nano::get_env_or_default ("NANO_TEST_WEBSOCKET_PORT", "17078");
+	auto test_env = nano::get_env_or_default ("NANO_TEST_WEBSOCKET_PORT", "17178");
 	return boost::lexical_cast<uint16_t> (test_env);
 }
 
 std::array<uint8_t, 2> test_magic_number ()
 {
-	auto test_env = get_env_or_default ("NANO_TEST_MAGIC_NUMBER", "RX");
+	auto test_env = get_env_or_default ("NANO_TEST_MAGIC_NUMBER", "AX");
 	std::array<uint8_t, 2> ret;
 	std::copy (test_env.begin (), test_env.end (), ret.data ());
 	return ret;

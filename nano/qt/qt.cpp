@@ -1767,7 +1767,7 @@ nano_qt::advanced_actions::advanced_actions (nano_qt::wallet & wallet_a) :
 	peers_model (new QStandardItemModel),
 	peers_view (new QTableView),
 	peer_summary_layout (new QHBoxLayout),
-	bootstrap_label (new QLabel ("IPV6:port \"::ffff:192.168.0.1:7075\"")),
+	bootstrap_label (new QLabel ("IPV6:port \"::ffff:192.168.0.1:7175\"")),
 	peer_count_label (new QLabel ("")),
 	bootstrap_line (new QLineEdit),
 	peers_bootstrap (new QPushButton ("Initiate Bootstrap")),
