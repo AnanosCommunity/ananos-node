@@ -91,9 +91,9 @@ int main (int argc, char * const * argv)
 		("debug_verify_profile_batch", "Profile batch signature verification")
 		("debug_profile_bootstrap", "Profile bootstrap style blocks processing (at least 10GB of free storage space required)")
 		("debug_profile_sign", "Profile signature generation")
-		("debug_profile_process", "Profile active blocks processing (only for nano_dev_network)")
-		("debug_profile_votes", "Profile votes processing (only for nano_dev_network)")
-		("debug_profile_frontiers_confirmation", "Profile frontiers confirmation speed (only for nano_dev_network)")
+		("debug_profile_process", "Profile active blocks processing (only for ananos_dev_network)")
+		("debug_profile_votes", "Profile votes processing (only for ananos_dev_network)")
+		("debug_profile_frontiers_confirmation", "Profile frontiers confirmation speed (only for ananos_dev_network)")
 		("debug_random_feed", "Generates output to RNG test suites")
 		("debug_rpc", "Read an RPC command from stdin and invoke it. Network operations will have no effect.")
 		("debug_peers", "Display peer IPv6:port connections")
@@ -887,7 +887,7 @@ int main (int argc, char * const * argv)
 		}
 		else if (vm.count ("debug_profile_process"))
 		{
-			nano::network_constants::set_active_network (nano::nano_networks::nano_dev_network);
+			nano::network_constants::set_active_network (nano::nano_networks::ananos_dev_network);
 			nano::network_params dev_params;
 			nano::block_builder builder;
 			size_t num_accounts (100000);
@@ -1004,7 +1004,7 @@ int main (int argc, char * const * argv)
 		}
 		else if (vm.count ("debug_profile_votes"))
 		{
-			nano::network_constants::set_active_network (nano::nano_networks::nano_dev_network);
+			nano::network_constants::set_active_network (nano::nano_networks::ananos_dev_network);
 			nano::network_params dev_params;
 			nano::block_builder builder;
 			size_t num_elections (40000);

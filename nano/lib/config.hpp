@@ -66,17 +66,13 @@ std::array<uint8_t, 2> test_magic_number ();
 enum class nano_networks
 {
 	// Low work parameters, publicly known genesis key, dev IP ports
-	nano_dev_network = 0,
-	rai_dev_network = 0,
+	ananos_dev_network = 0,
 	// Normal work parameters, secret beta genesis key, beta IP ports
-	nano_beta_network = 1,
-	rai_beta_network = 1,
+	ananos_beta_network = 1,
 	// Normal work parameters, secret live key, live IP ports
-	nano_live_network = 2,
-	rai_live_network = 2,
+	ananos_live_network = 2,
 	// Normal work parameters, secret test genesis key, test IP ports
-	nano_test_network = 3,
-	rai_test_network = 3,
+	ananos_test_network = 3,
 };
 
 struct work_thresholds
@@ -172,19 +168,19 @@ public:
 		auto error{ false };
 		if (network_a == "live")
 		{
-			active_network = nano::nano_networks::nano_live_network;
+			active_network = nano::nano_networks::ananos_live_network;
 		}
 		else if (network_a == "beta")
 		{
-			active_network = nano::nano_networks::nano_beta_network;
+			active_network = nano::nano_networks::ananos_beta_network;
 		}
 		else if (network_a == "dev")
 		{
-			active_network = nano::nano_networks::nano_dev_network;
+			active_network = nano::nano_networks::ananos_dev_network;
 		}
 		else if (network_a == "test")
 		{
-			active_network = nano::nano_networks::nano_test_network;
+			active_network = nano::nano_networks::ananos_test_network;
 		}
 		else
 		{
@@ -200,19 +196,19 @@ public:
 
 	bool is_live_network () const
 	{
-		return current_network == nano_networks::nano_live_network;
+		return current_network == nano_networks::ananos_live_network;
 	}
 	bool is_beta_network () const
 	{
-		return current_network == nano_networks::nano_beta_network;
+		return current_network == nano_networks::ananos_beta_network;
 	}
 	bool is_dev_network () const
 	{
-		return current_network == nano_networks::nano_dev_network;
+		return current_network == nano_networks::ananos_dev_network;
 	}
 	bool is_test_network () const
 	{
-		return current_network == nano_networks::nano_test_network;
+		return current_network == nano_networks::ananos_test_network;
 	}
 
 	/** Initial value is ACTIVE_NETWORK compile flag, but can be overridden by a CLI flag */

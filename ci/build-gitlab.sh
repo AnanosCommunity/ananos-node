@@ -53,10 +53,10 @@ if [[ ${FLAVOR-_} == "_" ]]; then
 fi
 
 if [[ "${BETA}" -eq 1 ]]; then
-    NETWORK_CFG="-DACTIVE_NETWORK=nano_beta_network"
+    NETWORK_CFG="-DACTIVE_NETWORK=ananos_beta_network"
     CONFIGURATION="RelWithDebInfo"
 else
-    NETWORK_CFG="-DACTIVE_NETWORK=nano_live_network"
+    NETWORK_CFG="-DACTIVE_NETWORK=ananos_live_network"
     CONFIGURATION="Release"
 fi
 

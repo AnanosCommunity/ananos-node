@@ -12,7 +12,7 @@ boost::filesystem::path nano::working_path (bool legacy)
 	auto result (nano::app_path ());
 	switch (network_constants.network ())
 	{
-		case nano::nano_networks::nano_dev_network:
+		case nano::nano_networks::ananos_dev_network:
 			if (!legacy)
 			{
 				result /= "NanoDev";
@@ -22,7 +22,7 @@ boost::filesystem::path nano::working_path (bool legacy)
 				result /= "RaiBlocksDev";
 			}
 			break;
-		case nano::nano_networks::nano_beta_network:
+		case nano::nano_networks::ananos_beta_network:
 			if (!legacy)
 			{
 				result /= "NanoBeta";
@@ -32,7 +32,7 @@ boost::filesystem::path nano::working_path (bool legacy)
 				result /= "RaiBlocksBeta";
 			}
 			break;
-		case nano::nano_networks::nano_live_network:
+		case nano::nano_networks::ananos_live_network:
 			if (!legacy)
 			{
 				result /= "Nano";
@@ -42,7 +42,7 @@ boost::filesystem::path nano::working_path (bool legacy)
 				result /= "RaiBlocks";
 			}
 			break;
-		case nano::nano_networks::nano_test_network:
+		case nano::nano_networks::ananos_test_network:
 			if (!legacy)
 			{
 				result /= "NanoTest";

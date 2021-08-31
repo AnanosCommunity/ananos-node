@@ -32,7 +32,7 @@ fi
 %autosetup -n nano-%{version}
 
 %build
-cmake -DCMAKE_VERBOSE_MAKEFILE=ON -DBOOST_ROOT=/usr/local/boost -DACTIVE_NETWORK=nano_beta_network .
+cmake -DCMAKE_VERBOSE_MAKEFILE=ON -DBOOST_ROOT=/usr/local/boost -DACTIVE_NETWORK=ananos_beta_network .
 make nano_node %{?_smp_mflags}
 make nano_rpc %{?_smp_mflags}
 

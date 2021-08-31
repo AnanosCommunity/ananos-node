@@ -59,7 +59,7 @@ fi
 
 cmake \
 -G'Unix Makefiles' \
--DACTIVE_NETWORK=nano_dev_network \
+-DACTIVE_NETWORK=ananos_dev_network \
 -DNANO_TEST=ON \
 -DNANO_GUI=ON \
 -DPORTABLE=1 \
