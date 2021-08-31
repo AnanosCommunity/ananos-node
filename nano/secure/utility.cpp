@@ -13,44 +13,16 @@ boost::filesystem::path nano::working_path (bool legacy)
 	switch (network_constants.network ())
 	{
 		case nano::nano_networks::ananos_dev_network:
-			if (!legacy)
-			{
-				result /= "NanoDev";
-			}
-			else
-			{
-				result /= "RaiBlocksDev";
-			}
+			result /= "AnanosDev";
 			break;
 		case nano::nano_networks::ananos_beta_network:
-			if (!legacy)
-			{
-				result /= "NanoBeta";
-			}
-			else
-			{
-				result /= "RaiBlocksBeta";
-			}
+			result /= "AnanosBeta";
 			break;
 		case nano::nano_networks::ananos_live_network:
-			if (!legacy)
-			{
-				result /= "Nano";
-			}
-			else
-			{
-				result /= "RaiBlocks";
-			}
+			result /= "Ananos";
 			break;
 		case nano::nano_networks::ananos_test_network:
-			if (!legacy)
-			{
-				result /= "NanoTest";
-			}
-			else
-			{
-				result /= "RaiBlocksTest";
-			}
+			result /= "AnanosTest";
 			break;
 	}
 	return result;
