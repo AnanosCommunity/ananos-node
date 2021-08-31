@@ -76,7 +76,7 @@ bool nano::public_key::decode_account (std::string const & source_a)
 	auto error (source_a.size () < 5);
 	if (!error)
 	{
-		auto ana_prefix (source[0] == 'a' && source_a[1] == "n" && source_a[2] == 'b' && (source_a[3] == '_' || source_a[3] == '-'));
+		auto ana_prefix (source_a[0] == 'a' && source_a[1] == 'n' && source_a[2] == 'a' && (source_a[3] == '_' || source_a[3] == '-'));
 		auto node_id_prefix = (source_a[0] == 'n' && source_a[1] == 'o' && source_a[2] == 'd' && source_a[3] == 'e' && source_a[4] == '_');
 		error = ana_prefix && source_a.size () != 64;
 		if (!error)
