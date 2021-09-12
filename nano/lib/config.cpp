@@ -26,14 +26,15 @@ struct HexTo
 
 namespace nano
 {
+// As low as you can get, we're like 3 people using it anyway
 work_thresholds const network_constants::publish_full (
-0xffffffc000000000,
-0xfffffff800000000, // 8x higher than epoch_1
-0xfffffe0000000000 // 8x lower than epoch_1
+0xfffffe0000000000,
+0xfffffe0000000000,
+0xfffffe0000000000
 );
 
 work_thresholds const network_constants::publish_beta (
-0xfffff00000000000, // 64x lower than publish_full.epoch_1
+0xfffff00000000000, // 8x lower than publish_full.epoch_1
 0xfffff00000000000, // same as epoch_1
 0xffffe00000000000 // 2x lower than epoch_1
 );
@@ -45,9 +46,9 @@ work_thresholds const network_constants::publish_dev (
 );
 
 work_thresholds const network_constants::publish_test ( //defaults to live network levels
-get_env_threshold_or_default ("NANO_TEST_EPOCH_1", 0xffffffc000000000),
-get_env_threshold_or_default ("NANO_TEST_EPOCH_2", 0xfffffff800000000), // 8x higher than epoch_1
-get_env_threshold_or_default ("NANO_TEST_EPOCH_2_RECV", 0xfffffe0000000000) // 8x lower than epoch_1
+get_env_threshold_or_default ("NANO_TEST_EPOCH_1", 0xfffffe0000000000),
+get_env_threshold_or_default ("NANO_TEST_EPOCH_2", 0xfffffe0000000000),
+get_env_threshold_or_default ("NANO_TEST_EPOCH_2_RECV", 0xfffffe0000000000)
 );
 
 const char * network_constants::active_network_err_msg = "Invalid network. Valid values are live, test, beta and dev.";
